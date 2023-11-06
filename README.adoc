@@ -1,0 +1,35 @@
+= terraform-pagerduty-provider-setup
+:!toc-title:
+:!toc-placement:
+:toc:
+
+A helper to set up your PagerDuty Provider
+
+toc::[]
+
+== About
+A token is required to use a PagerDuty Provider.
+This module provides that token from a shared Secrets Manager secret in a central common account.
+
+
+== Usage
+
+To use this module, just add it to your terraform!
+
+[source,hcl]
+----
+module "pagerduty_token" {
+  source = "github.com/nsbno/terraform-pagerduty-provider-setup?ref=x.y.z"
+}
+
+provider "pagerduty" {
+  token = module.pagerduty_token.token
+}
+----
+
+== Relevant Repositories
+
+You can use these repos together with this repo!
+
+link:https://github.com/nsbno/terraform-pagerduty-alarm[`nsbno/terraform-pagerduty-alarm`]::
+Set up a PagerDuty alarm module after using this provider setup.
