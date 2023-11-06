@@ -10,11 +10,12 @@ toc::[]
 == About
 A token is required to use a PagerDuty Provider.
 This module provides that token from a shared Secrets Manager secret in a central common account.
+Terraform does not support providers being directly defined in modules, which is why we need this setup.
 
 
 == Usage
 
-To use this module, just add it to your terraform!
+To use this module, just add it to your terraform where you define your other providers!
 
 [source,hcl]
 ----
