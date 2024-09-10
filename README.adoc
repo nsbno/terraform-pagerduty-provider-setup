@@ -30,7 +30,7 @@ provider "pagerduty" {
 
 == Relevant Repositories
 
-You can use these repos together with this repo!
+You can use this repo together with this repo!
 
-link:https://github.com/nsbno/terraform-pagerduty-alarm[`nsbno/terraform-pagerduty-alarm`]::
-Set up a PagerDuty alarm module after using this provider setup.
+link:https://github.com/nsbno/terraform-pagerduty-service[`nsbno/terraform-pagerduty-service`]::
+Set up a PagerDuty service after using this provider setup.
